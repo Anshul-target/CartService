@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Controller
+@RestController
 @RequestMapping("/api1")
 public class CartController {
 
@@ -60,7 +60,7 @@ CartServiceImpl cartService;
         return cartDTO;
     }
 
-    @GetMapping("/")
+    @GetMapping
     public  String welcome(){
         return "Hello";
     }
